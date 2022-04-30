@@ -93,7 +93,18 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Test:My First Blog<br>亲亲宝宝</p>
+        <h1 id="My-First-Blog"><a href="#My-First-Blog" class="headerlink" title="My First Blog"></a>My First Blog</h1><h2 id="Github博客搭建"><a href="#Github博客搭建" class="headerlink" title="Github博客搭建"></a>Github博客搭建</h2><h3 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h3><p>git安装：<a target="_blank" rel="noopener" href="https://git-scm.com/">https://git-scm.com/</a><br>node.js安装：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a><br>创建github仓库：<code>username.github.io</code><br>git中安装hexo： <code>npm install hexo -g</code></p>
+<hr>
+<h3 id="SSH-Key设置"><a href="#SSH-Key设置" class="headerlink" title="SSH Key设置"></a>SSH Key设置</h3><p>打开git： <code>Git bash</code><br>进入ssh目录：  <code>cd ~/.ssh</code><br>生成rsa公钥： <code>ssh-keygen -t rsa -C &quot;@youremail&quot;</code><br>复制rsa公钥： <code>Windows:  C:/user/Administrator/.ssh/id_rsa.pub </code><br>GitHub配置：<code>Setting/SSH and GPG keys/New SSH Key</code><br>git配置 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com`  </span><br><span class="line">git config --global user.name &quot;username&quot;  </span><br><span class="line">git config --global user.email &quot;@youremail&quot;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="Hexo搭建blog"><a href="#Hexo搭建blog" class="headerlink" title="Hexo搭建blog"></a>Hexo搭建blog</h3><p>创建Blog目录 <code>./MyBlog</code><br>git中初始化个人博客：<code>hexo init</code><br>在<code>./MyBlog</code> 中编辑 <code>_config.yml</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:  </span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:usernmae/username.github.io.git</span><br><span class="line">  branch: your branch</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="编写blog"><a href="#编写blog" class="headerlink" title="编写blog"></a>编写blog</h3><p>git中新建博客：<code>hexo new &#39;blog-title&#39;</code><br>编辑<code>./MyBlog/source/_posts/&#39;blog-title.md&#39;</code>文件创作blog<br>git中部署blog至github</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<hr>
+<p>查看blog<br><code>https://username.github.io/</code></p>
         
           <p class="article-more-link">
             <a href="/2022/04/30/MyFirstBlog/#more">Read More</a>
